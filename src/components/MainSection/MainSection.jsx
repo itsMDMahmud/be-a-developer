@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import QuesAns from "../QuesAns/QuesAns";
 import SingleCard from "../SingleCard/SingleCard";
 import "./MainSection.css";
 
@@ -29,12 +30,13 @@ const MainSection = () => {
         {/*------- body right side --------- */}
 
         <div className="body-right">
-            <div className="right-heading"><h2>Spend time on read</h2></div>
+            <div className="right-heading"><h2>Spend time on read: 0 minutes</h2></div>
             <div>
               
             </div>
         </div>
       </div>
+      <QuesAns></QuesAns>
     </>
   );
 };
