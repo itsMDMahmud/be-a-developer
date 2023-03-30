@@ -1,5 +1,7 @@
 import React from 'react';
-import './SingleCard.css'
+import './SingleCard.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const SingleCard = (props) => {
     const {card} = props;
@@ -13,7 +15,7 @@ const SingleCard = (props) => {
                 <h2>{card.AuthorName}</h2>
                 <p className='date'>{card.PublishDate}</p>
               </div>
-              <p className='readtime'>0{card.ReadTime} minute read</p>
+              <p className='readtime'>0{card.ReadTime} minute read <span className='bookmark'><FontAwesomeIcon icon={faBookmark} /></span></p>
             </div>
           </div>
           <h1>{card.BlogTitle}</h1>
