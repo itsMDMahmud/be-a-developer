@@ -29,7 +29,10 @@ const MainSection = () => {
         {/*------- body right side --------- */}
 
         <div className="body-right">
-            <h2>Spend time on read</h2>
+            <div className="right-heading"><h2>Spend time on read</h2></div>
+            <div>
+              
+            </div>
         </div>
       </div>
     </>
