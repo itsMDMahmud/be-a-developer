@@ -15,7 +15,7 @@ const SingleCard = (props) => {
                 <h2>{card.AuthorName}</h2>
                 <p className='date'>{card.PublishDate}</p>
               </div>
-              <p className='readtime'>0{card.ReadTime} minute read <span className='bookmark'><FontAwesomeIcon icon={faBookmark} /></span></p>
+              <p className='readtime'>0{card.ReadTime} minute to read <span className='bookmark'><FontAwesomeIcon icon={faBookmark} /></span></p>
             </div>
           </div>
           <h1>{card.BlogTitle}</h1>
