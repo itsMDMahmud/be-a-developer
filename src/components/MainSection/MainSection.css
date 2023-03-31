@@ -9,6 +9,18 @@
     border-radius: 15px;
     border: 1px solid teal;
 }
+.bookmarked-blogs{
+    text-align: center;
+    background-color: #f1f2f6;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 128, 128, 0.25);
+}
+.blog-names{
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+}
 .body-component{
     margin: 50px 60px;
     display: grid;
