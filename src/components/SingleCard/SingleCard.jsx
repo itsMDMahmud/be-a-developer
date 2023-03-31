@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const SingleCard = (props) => {
-    const {card} = props;
+    const {card, handleBookmark } = props;
     return (
         <div className='single-card'>
             <img className='blogCoverImage' src={card.BlogCoverImage} alt="image" />
@@ -15,14 +15,17 @@ const SingleCard = (props) => {
                 <h2>{card.AuthorName}</h2>
                 <p className='date'>{card.PublishDate}</p>
               </div>
-              <p className='readtime'>0{card.ReadTime} minute to read <span className='bookmark'><FontAwesomeIcon icon={faBookmark} /></span></p>
+              <p className='readtime'>0{card.ReadTime} minute to read <span 
+                className='bookmark'><FontAwesomeIcon icon={faBookmark} /></span></p>             
             </div>
           </div>
           <h1>{card.BlogTitle}</h1>
           <p className='hashtag'>#beginners  #programming</p>
-          <a className='card-a' href="">Mark as read</a>
+          <p onClick={()=>handleBookmark(card.ReadTime)} className='card-a' href="">Mark as read</p>
         </div>
     );
 };
 
 export default SingleCard;
+
+// onClick={handleBookmark} 

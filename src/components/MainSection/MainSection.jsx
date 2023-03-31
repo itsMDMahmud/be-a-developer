@@ -4,8 +4,9 @@ import QuesAns from "../QuesAns/QuesAns";
 import SingleCard from "../SingleCard/SingleCard";
 import "./MainSection.css";
 
-const MainSection = () => {
+const MainSection = ({handleBookmark, readTime}) => {
     const [cards, setCards] = useState([]);
+    const [time, setTime] = useState(readTime);
 
     useEffect(() => {
         fetch('generated.json')
@@ -13,21 +14,26 @@ const MainSection = () => {
 	        .then(data => setCards(data))
     });
 
+    useEffect(() => {
+      const getReadTimeFromStorage = localStorage.getItem("readTime");
+      setTime(getReadTimeFromStorage); 
+     }, [readTime]);
+
   return (
     <>
 
       <div className="body-component">
 
         {/*-------- body left side -------- */}
-        <div>{cards.map((card) =>(<SingleCard card={card}></SingleCard>))}</div>
+        <div>{cards.map((card) =>(<SingleCard handleBookmark={handleBookmark} card={card}></SingleCard>))}</div>
 
         
         {/*------- body right side --------- */}
 
         <div className="body-right">
-            <div className="right-heading"><h2>Spend time on read: 0 minutes</h2></div>
+            <div className="right-heading"><h2>Spend time on read: {readTime} minutes</h2></div>
             <div>
-              <BookmarkBlogs></BookmarkBlogs>
+              <BookmarkBlogs readTime={readTime} handleBookmark={handleBookmark}></BookmarkBlogs>
             </div>
         </div>
       </div>
