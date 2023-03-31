@@ -1,8 +1,5 @@
-.body-component{
-    margin: 50px 60px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
+*{
+    box-sizing: border-box;
 }
 .right-heading{
     text-align: center;
@@ -12,7 +9,12 @@
     border-radius: 15px;
     border: 1px solid teal;
 }
-
+.body-component{
+    margin: 50px 60px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
 @media (max-width: 576px) {
     .body-component{
         display: flex;
