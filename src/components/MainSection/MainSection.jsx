@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import QuesAns from "../QuesAns/QuesAns";
 import SingleCard from "../SingleCard/SingleCard";
 import "./MainSection.css";
+import "./MainSections.css";
 
 const MainSection = ({ handleBookmark, readTime, bookMarkBlogs, bmBlog }) => {
   const [cards, setCards] = useState([]);
