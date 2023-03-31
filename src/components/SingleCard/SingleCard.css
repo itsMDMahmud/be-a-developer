@@ -46,9 +46,10 @@
 @media (max-width: 576px) {
     .blogCoverImage{
         height: 100%;
-        width: 90vw;
+        width: 80vw;
         border-radius: 10px;
         margin: 0 auto;
+        padding: 0 auto;
     }
     .name-time{
         display: flex;
@@ -65,10 +66,9 @@
         text-align: center;
         
     }
-    
-   
     .single-card{
+        width: 90vw;
         margin: 0 auto;
-        padding: 0 auto;
+        padding: 0 auto;        
     }
 };
